@@ -1,0 +1,17 @@
+{
+  "name": "order-app-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:ui": "cd ui && npm install",
+    "install:all": "npm run install:server && npm run install:ui",
+    "build:ui": "cd ui && npm run build",
+    "build": "npm run install:all && npm run build:ui",
+    "start": "node server/src/index.js"
+  },
+  "workspaces": [
+    "server",
+    "ui"
+  ]
+} 
