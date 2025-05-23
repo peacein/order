@@ -1,3 +1,5 @@
+require('dotenv').config({ path: require('path').resolve(__dirname, '../../.env') }); // 프로젝트 루트의 .env 파일 로드
+
 const express = require('express');
 const cors = require('cors');
 const path = require('path');

@@ -6,7 +6,9 @@ import americanoImg from '../assets/images/americano.jpg'
 import icedAmericanoImg from '../assets/images/iced-americano.jpg'
 import latteImg from '../assets/images/latte.jpg'
 
-const API_BASE_URL = 'http://localhost:3000/api';
+// const API_BASE_URL = 'http://localhost:3000/api'; // 기존 코드 주석 처리
+// const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api'; // 기존 CRA 방식 주석 처리
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api'; // Vite 방식, 기본값 /api
 
 const MenuPage = () => {
   const [menuItems, setMenuItems] = useState([]);

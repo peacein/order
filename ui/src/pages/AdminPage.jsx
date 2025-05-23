@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/AdminPage.css'; // 어드민 페이지용 CSS (나중에 생성)
 
-const API_BASE_URL = 'http://localhost:3000/api';
+// const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || '/api'; // 기존 CRA 방식 주석 처리
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api'; // Vite 방식, 기본값 /api
 
 // 유틸리티 함수들 (OrderHistoryPage에서 가져옴)
 const getStatusText = (status) => {
