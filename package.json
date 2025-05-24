@@ -6,7 +6,7 @@
     "install:ui": "cd ui && npm install",
     "install:server": "cd server && npm install",
     "install:all": "npm run install:ui && npm run install:server",
-    "build:ui": "cd ui && npm run build",
+    "build:ui": "cd ui && npm install && npm run build",
     "build": "npm run build:ui",
     "start": "cd server && npm start",
     "dev:ui": "cd ui && npm run dev",
